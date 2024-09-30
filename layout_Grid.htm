@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Mới - Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f8f8; /* Màu nền nhẹ cho toàn bộ trang */
+        }
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr auto; /* Header, content, footer */
+            grid-template-columns: repeat(3, 1fr); /* Ba cột bằng nhau */
+            width: 80%;
+            margin: 0 auto;
+            height: 50vh; /* Chiếm chiều cao */
+        }
+        .header {
+            grid-column: 1 / -1; /* Header chiếm toàn bộ chiều ngang */
+            background: #ffffff; /* Màu trắng cho header */
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px; /* Kích thước chữ lớn hơn */
+            font-weight: bold; /* In đậm chữ */
+        }
+        .content {
+            display: contents; /* Sử dụng grid cho các cột */
+        }
+        .column {
+            background: #e0e0e0; /* Màu xám nhạt cho cột */
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100%; /* Chiều cao cột */
+        }
+        .column:nth-child(1) {
+            background: #d3d3d3; /* Xám */
+        }
+        .column:nth-child(2) {
+            background: #e6e6e6; /* Xám nhạt hơn */
+        }
+        .column h2 {
+            margin: 0;
+            font-size: 16px; /* Kích thước chữ nhỏ hơn */
+        }
+        .footer {
+            grid-column: 1 / -1; /* Footer chiếm toàn bộ chiều ngang */
+            background: #ffffff; /* Màu trắng cho footer */
+            padding: 10px 20px; /* Thêm padding */
+            text-align: center; /* Căn giữa */
+        }
+        .final-output {
+            margin-top: 0; /* Không có khoảng cách trên */
+            text-align: left; /* Căn trái */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class="content">
+            <div class="column">
+                <h2>Column 1</h2>
+            </div>
+            <div class="column">
+                <h2>Column 2</h2>
+            </div>
+            <div class="column">
+                <h2>Column 3</h2>
+            </div>
+        </div>
+        <div class="footer">
+            Footer<br>
+            <div class="final-output">
+                Output:<br>
+                Link git repo
+            </div>
+        </div>
+    </div>
+</body>
+</html>

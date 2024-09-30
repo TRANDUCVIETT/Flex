@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Mới</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f8f8; /* Màu nền nhẹ cho toàn bộ trang */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column; /* Sắp xếp theo cột */
+            height: 50vh; /* Chiếm toàn bộ chiều cao */
+        }
+        .header {
+            background: #ffffff; /* Màu trắng cho header */
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px; /* Kích thước chữ lớn hơn */
+            font-weight: bold; /* In đậm chữ */
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            flex: 1; /* Chiếm phần còn lại */
+            background: #e0e0e0; /* Màu nền cho hàng 2 */
+            padding: 0 10px; /* Thêm padding hai bên */
+            box-sizing: border-box; /* Đảm bảo padding không làm thay đổi chiều rộng */
+        }
+        .column {
+            flex: 1;
+            background: #e0e0e0; /* Màu xám nhạt cho cột */
+            margin: 0; /* Xóa margin giữa các cột */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .column:nth-child(1) {
+            background: #d3d3d3; /* Xám */
+        }
+        .column:nth-child(2) {
+            background: #e6e6e6; /* Xám nhạt hơn */
+        }
+        .column h2 {
+            margin: 0;
+            font-size: 16px; /* Kích thước chữ nhỏ hơn */
+        }
+        .footer {
+            background: #ffffff; /* Màu trắng cho footer */
+            padding: 10px 20px; /* Thêm padding */
+            text-align: center; /* Căn giữa */
+        }
+        .final-output {
+            margin-top: 0; /* Không có khoảng cách trên */
+            text-align: left; /* Căn trái */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class="content">
+            <div class="column">
+                <h2>Column 1</h2>
+            </div>
+            <div class="column">
+                <h2>Column 2</h2>
+            </div>
+            <div class="column">
+                <h2>Column 3</h2>
+            </div>
+        </div>
+        <div class="footer">
+            Footer<br>
+            <div class="final-output">
+                Output:<br>
+                Link git repo
+            </div>
+        </div>
+    </div>
+</body>
+</html>
